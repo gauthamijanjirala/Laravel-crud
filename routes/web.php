@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +14,10 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/',[ProductController::class,'index' ])->name('products.index');
+Route::get('/', function () {
+    return view('welcome');
+});
 
+Route::get('login',[AuthController::class,'index'])->name('login');
+Route::get('register',[AuthController::class,'register_view'])->name('register');
+ 
