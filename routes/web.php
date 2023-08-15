@@ -19,5 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('login',[AuthController::class,'index'])->name('login');
-Route::get('register',[AuthController::class,'register_view'])->name('register');
+Route::get('register',[Authcontroller::class,'register_view'])->name('register');
  

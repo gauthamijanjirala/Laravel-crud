@@ -1,4 +1,4 @@
-<!-- @extends('layouts.app')
+@extends('layouts.app')
 @section('content')
 
 <div class="container">
@@ -9,7 +9,7 @@
                 <div class="card-body">
                     <h1> Login </h1>
 
-                    @if(session::has('error'))
+                    @if(Session::has('error'))
                         <p class="text-danger">{{ Session::get('error')}} </p>
                     @endif
                     @if (Session::has('success'))
@@ -47,6 +47,4 @@
         </div>
     </div>
 </div>
-@endsection -->
-
-<h1> Login </h1>
+@endsection
