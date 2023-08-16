@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Login & Register</title>
@@ -12,8 +11,9 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-    @include('layouts.navigation')
+
+    @include('layouts.navigation') 
 
     @yield('content')
-</body>
+</body>  
 </html>

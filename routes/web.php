@@ -16,8 +16,12 @@ use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+});     
 
 Route::get('login',[AuthController::class,'index'])->name('login');
+Route::post('login',[AuthController::class,'login'])->name('login');
+
 Route::get('register',[Authcontroller::class,'register_view'])->name('register');
- 
+Route::post('register',[Authcontroller::class,'register'])->name('register');
+
+Route::get('home',[Authcontroller::class,'home'])->name('home');

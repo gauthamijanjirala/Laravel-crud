@@ -3,6 +3,7 @@
 
 <div class="container">
     <div class="row">
+         
         <div class="col-md-4 offset-md-4">
             <div class="card form-holder">
                 <div class="card-body">
@@ -35,18 +36,18 @@
                             <p class="text-danger">{{ $errors->first('password') }}</p>
                         @endif
                     </div>
-                        <div class="form-group">
-                            <label>Confirm Password </label>
-                            <input type="text" name="password_confirmation" class="form-control" placeholder="Password Confirmation"/>
+                    <div class="form-group">
+                        <label>Confirm Password </label>
+                        <input type="password" name="password_confirmation" class="form-control" placeholder="Password Confirmation"/>
+                    </div>
+                    <div class="row">
+                        <div class="col-8 text-left">
+                            <a href="#" class="btn btn-link"> Forget Password </a>
                         </div>
-                        <div class="row">
-                            <div class="col-8 text-left">
-                                <a href="#" class="btn btn-link"> Forget Password </a>
-                            </div>
-                            <div class="col-4 text-right">
-                                <input type="submit" class="btn btn-primary" value="Login"/>
-                            </div>
+                        <div class="col-4 text-right">
+                            <input type="submit" class="btn btn-primary" value="Register"/>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
