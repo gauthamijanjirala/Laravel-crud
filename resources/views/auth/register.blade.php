@@ -7,6 +7,7 @@
         <div class="col-md-4 offset-md-4">
             <div class="card form-holder">
                 <div class="card-body">
+                    
                     <h1> Register </h1>
 
                     @if(Session::has('error'))
