@@ -22,7 +22,7 @@
                         @method('post')
                         <div class="form-group">
                             <label>Email </label>
-                            <input type="email" name="email" class="form-control" placeholder="Email"/>
+                            <input type="email" name="email" class="form-control" placeholder="Email" value=""/>
                             @if($errors->has('email'))
                             <p class="text-danger">{{ $errors->first('email') }}</p>
                             @endif

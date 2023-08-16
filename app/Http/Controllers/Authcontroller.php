@@ -25,7 +25,7 @@ class Authcontroller extends Controller
     public function register(Request $request){
         // validate 
         $request->validate([
-            'name '=>'required',
+            'name'=>'required',
             'email'=> 'required|unique:users|email',
             'password' => 'required|confirmed',
         ]);
@@ -42,9 +42,15 @@ class Authcontroller extends Controller
         }
         return redirect('register')->withError('Error');
     }
+     
     public function home(){
         return view('home');
     }
-
-
+    public function logout(){
+        \Session::flush();
+        \Auth::logout();
+        return redirect('');
+    }
+    
 } 
+

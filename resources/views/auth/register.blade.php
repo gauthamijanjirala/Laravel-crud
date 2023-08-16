@@ -13,19 +13,22 @@
                     @if(Session::has('error'))
                         <p class="text-danger">{{Session::get('error')}} </p>
                     @endif
+                    @if($errors->any())
+                        {{ implode('', $errors->all('<div>:message</div>')) }}
+                    @endif
                     <form action="{{ route('register') }}" method="post">
                     @csrf
                     @method('post')
                     <div class="form-group">
                         <label>Name</label>
-                        <input type="text" name="name" class="form-control" placeholder="Name"/>
+                        <input type="text" name="name" class="form-control" placeholder="Name" value="{{ old('name') }}"/>
                         @if($errors->has('name'))
                             <p class="text-danger">{{ $erroes->first('name')}}</p>
                         @endif
                     </div>
                     <div class="form-group">
                         <label>Email </label>
-                        <input type="email" name="email" class="form-control" placeholder="Email"/>
+                        <input type="email" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}"/>
                         @if ($errors->has('email'))
                             <p class="text-danger">{{ $errors->first('email')}}</p>
                         @endif
